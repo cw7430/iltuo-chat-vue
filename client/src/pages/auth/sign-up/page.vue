@@ -1,11 +1,14 @@
 <script lang="ts">
+import { AuthLayout } from "@/components/layouts";
+
 export default {
   name: "SignUpPage",
+  components: {
+    AuthLayout,
+  },
 };
 </script>
 
 <template>
-  <div>
-    <h1>Sign Up</h1>
-  </div>
+  <AuthLayout page="sign-up"></AuthLayout>
 </template>

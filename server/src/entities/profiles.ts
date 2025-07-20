@@ -6,7 +6,6 @@ import {
   timestamp,
   date,
   text,
-  boolean,
 } from "drizzle-orm/mysql-core";
 
 import { users } from "./auths";
@@ -20,7 +19,8 @@ export const profiles = mysqlTable("profiles", {
   mbti: varchar("mbti", { length: 100 }).notNull(),
   birthDate: date("birth_date").notNull(),
   gender: varchar("gender", { length: 100 }).notNull(),
-  bio: text("bio").notNull(),
+  bio: text("bio"),
+  mainProfileImageId: bigint("main_profile_image_id", { mode: "bigint" }),
   createdAt: timestamp("created_at", { mode: "date" })
     .notNull()
     .default(sql`CURRENT_TIMESTAMP`),
@@ -39,5 +39,4 @@ export const profileImages = mysqlTable("profile_images", {
   createdAt: timestamp("created_at", { mode: "date" })
     .notNull()
     .default(sql`CURRENT_TIMESTAMP`),
-  isMain: boolean("is_main").notNull().default(false),
 });
