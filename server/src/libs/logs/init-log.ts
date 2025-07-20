@@ -1,6 +1,6 @@
 import chalk from "chalk";
 
-import { config } from "../../config";
+import { config } from "../../configs";
 import log from "./log";
 
 const initLog = () => {

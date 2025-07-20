@@ -1,5 +1,5 @@
 import app from './app';
-import { config } from "./config";
+import { config } from "./configs";
 import { errorHandler, viteMiddleware } from "./middlewares";
 import { initLog, log } from "./libs/logs";
 import { registerRoutes } from "./routes";
