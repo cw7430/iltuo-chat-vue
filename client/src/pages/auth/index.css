@@ -1,0 +1,34 @@
+.custom-gradient {
+  background: linear-gradient(to bottom right, #0a0a0a, #4b0082, #0a0a0a);
+}
+
+.custom-box {
+  max-width: 28rem;
+  background-color: rgba(30, 30, 30, 0.5);
+  backdrop-filter: blur(1rem);
+  border-color: rgba(168, 85, 247, 0.2);
+}
+
+.p-custom {
+  padding: 2rem;
+}
+
+.custom-mb {
+  margin-bottom: 2rem;
+}
+
+.custom-purple-pink {
+  background-image: linear-gradient(to right, #a855f7, #ec4899) !important;
+}
+
+.custom-purple-pink-hover:hover {
+  background-image: linear-gradient(to right, #9333ea, #db2777) !important;
+}
+
+.text-gray-300-custom {
+  color: #d1d5db;
+}
+
+.text-gray-400-custom {
+  color: #9ca3af;
+}

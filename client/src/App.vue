@@ -10,14 +10,13 @@ const route = useRoute();
 onMounted(() => {
   InitializeAuth();
 });
+
 </script>
 
 <template>
-  <div fluid class="min-vh-100 d-flex flex-column p-0">
+  <div class="min-vh-100 d-flex flex-column p-0">
     <HeaderLayout v-if="!route.path.startsWith('/auth') && route.name !== 'NotFound'" />
-    <main class="flex-fill py-4">
-      <RouterView />
-    </main>
+    <RouterView />
   </div>
 </template>
 

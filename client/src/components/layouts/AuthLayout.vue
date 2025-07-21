@@ -1,4 +1,6 @@
 <script lang="ts">
+import "@/pages/auth/index.css";
+
 import type { PropType } from "vue";
 import { BCard, BCardBody, BButton } from "bootstrap-vue-next";
 import { Heart } from "lucide-vue-next";
@@ -38,7 +40,7 @@ export default {
       <BCardBody class="p-custom">
         <div class="text-center custom-mb">
           <div class="d-flex justify-content-center mb-3">
-            <div class="p-3 rounded-pill custom-gradient">
+            <div class="p-3 rounded-pill custom-purple-pink">
               <Heart class="text-white fs-4" />
             </div>
           </div>
@@ -66,32 +68,3 @@ export default {
     </BCard>
   </div>
 </template>
-
-<style scoped>
-.custom-gradient {
-  background: linear-gradient(to bottom right, #0a0a0a, #4b0082, #0a0a0a);
-}
-
-.custom-box {
-  max-width: 28rem;
-  background-color: rgba(30, 30, 30, 0.5);
-  backdrop-filter: blur(1rem);
-  border-color: rgba(168, 85, 247, 0.2);
-}
-
-.p-custom {
-  padding: 2rem;
-}
-
-.custom-mb {
-  margin-bottom: 2rem;
-}
-
-.custom-gradient {
-  background: linear-gradient(to right, #a855f7, #ec4899);
-}
-
-.text-gray-400-custom {
-  color: #9ca3af;
-}
-</style>
