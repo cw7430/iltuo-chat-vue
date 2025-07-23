@@ -27,6 +27,8 @@ export const config = {
   LOCAL_IP: localIp,
   NODE_ENV: process.env.NODE_ENV || "development",
   PORT: parseInt(process.env.PORT || "5000", 10),
+  JWT_ACCESS_SECRET: process.env.JWT_ACCESS_SECRET,
+  JWT_REFRESH_SECRET: process.env.JWT_REFRESH_SECRET,
   APP_TITLE: process.env.VITE_APP_TITLE || "Iltuo Chat",
   DATABASE_HOST: process.env.DB_HOST,
   DATABASE_PORT: parseInt(process.env.DB_PORT || "3306", 10),

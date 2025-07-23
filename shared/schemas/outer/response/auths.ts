@@ -46,20 +46,20 @@ const baseSignUpSchema = {
   ),
 };
 
-export const nativeSignInRequestSchema = z.object(baseSchema);
+export const nativeSignInOuterRequestSchema = z.object(baseSchema);
 
-export const nativeSignUpRequestSchema = z.object(baseSignUpSchema);
+export const nativeSignUpOuterRequestSchema = z.object(baseSignUpSchema);
 
-export const userIdDuplicateCheckRequestSchema = z.object({
+export const userIdDuplicateCheckOuterRequestSchema = z.object({
   userId: baseSignUpSchema.userId,
 });
 
-export const changePasswordRequestSchema = z.object({
+export const changePasswordOuterRequestSchema = z.object({
   formalPassword: baseSchema.password,
   newPassword: baseSignUpSchema.password,
 });
 
-export type NativeSignInRequestDto = z.infer<typeof nativeSignInRequestSchema>;
-export type UserIdDuplicateCheckRequestDto = z.infer<typeof userIdDuplicateCheckRequestSchema>;
-export type NativeSignUpRequestDto = z.infer<typeof nativeSignUpRequestSchema>;
-export type ChangePasswordRequestDto = z.infer<typeof changePasswordRequestSchema>;
+export type NativeSignInOuterRequestDto = z.infer<typeof nativeSignInOuterRequestSchema>;
+export type UserIdDuplicateCheckOuterRequestDto = z.infer<typeof userIdDuplicateCheckOuterRequestSchema>;
+export type NativeSignUpOuterRequestDto = z.infer<typeof nativeSignUpOuterRequestSchema>;
+export type ChangePasswordOuterRequestDto = z.infer<typeof changePasswordOuterRequestSchema>;
